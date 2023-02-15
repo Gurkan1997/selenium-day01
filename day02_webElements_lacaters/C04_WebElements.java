@@ -6,12 +6,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 public class C04_WebElements {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("Webdriver.chrome.driver","drivers/chromedriver");
+        //System.setProperty("Webdriver.chrome.driver","drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
         // amazon anasayfaya gidin
         driver.get("https://www.amazon.com");
+
         // arama kutusunu locate edip bir webelement olarak kaydedin
         // id'si twotabsearchtextbox olan webelement seklinde locate edecegiz
         /*

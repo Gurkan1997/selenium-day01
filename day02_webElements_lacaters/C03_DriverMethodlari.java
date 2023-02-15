@@ -4,13 +4,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 public class C03_DriverMethodlari {
     public static void main(String[] args) {
+
         //Yeni bir class olusturalim (Homework)
         //ChromeDriver kullanarak, facebook sayfasina gidin
-        System.setProperty("Webdriver.chrome.driver","drivers/chromedriver");
+        //System.setProperty("Webdriver.chrome.driver","drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.facebook.com");
+
         // ve sayfa basliginin (title) “facebook” oldugunu dogrulayin (verify),
         // degilse dogru basligi yazdirin.
         String expectedTitle = "facebook";
@@ -31,8 +33,10 @@ public class C03_DriverMethodlari {
             System.out.println("Facebook url testi FAILED" +
                     "\nGerceklesen url : " + actualUrl);
         }
+
         // https://www.walmart.com/ sayfasina gidin.
         driver.get("https://www.walmart.com");
+
         // Sayfa basliginin “Walmart.com” icerdigini dogrulayin.
         String walmartExpectedIcerik= "Walmart.com";
         String walmartActualTitle= driver.getTitle();
@@ -43,10 +47,13 @@ public class C03_DriverMethodlari {
         }
         // Tekrar “facebook” sayfasina donun
         driver.navigate().back();
+
         // Sayfayi yenileyin
         driver.navigate().refresh();
+
         // Sayfayi tam sayfa (maximize) yapin
         driver.manage().window().maximize();
+
         //Browser’i  kapatin
         driver.close();
     }
