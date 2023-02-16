@@ -11,7 +11,7 @@ public class C03_CssSelector {
         WebDriver driver= new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("https://www.amazon.com/");
+        driver.get("https://www.amazon.com");
         //3-  Browseri tam sayfa yapin
         //4-  Sayfayi “refresh” yapin
         //5-  Sayfa basliginin “Spend less” ifadesi icerdigini test edin
@@ -22,11 +22,12 @@ public class C03_CssSelector {
         }else{
             System.out.println("Title testi FAILED");
         }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.findElement(By.xpath("(//input[@type='submit'])[2]")).click();
         //6-  Gift Cards sekmesine basin
-        driver.findElement(By.cssSelector("a[data-csa-c-content-id='nav_cs_gc']")).click();
-
+        driver.findElement(By.xpath("(//a[@data-csa-c-type='link'])[5]")).click();
         //7-  Birthday butonuna basin
-        driver.findElement(By.cssSelector("a[aria-label='Birthday']")).click();
+        //driver.findElement(By.xpath("(//img[@alt='Birthday'])[2]")).click();
         //8-  Best Seller bolumunden ilk urunu tiklayin
         driver.findElement(By.xpath("(//span[@class='a-truncate-cut'])[1]")).click();
         //9-  Gift card details’den 25 $’i  secin
