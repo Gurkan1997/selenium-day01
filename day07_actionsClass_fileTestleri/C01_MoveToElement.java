@@ -20,7 +20,7 @@ public class C01_MoveToElement extends TestBase {
         bekle(2);
         //3- “Create a list” butonuna basin
 
-        driver.findElement(By.xpath("//*[text()='Create a List']")).click();
+        driver.findElement(By.xpath("//*[text()='Neue Liste anlegen ']")).click();
         //4- Acilan sayfada “Your Lists” yazisi oldugunu test edin
         WebElement yourListsElementi= driver.findElement(By.id("my-lists-tab"));
         Assert.assertTrue(yourListsElementi.isDisplayed());

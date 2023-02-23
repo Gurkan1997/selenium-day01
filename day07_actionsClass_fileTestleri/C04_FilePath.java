@@ -26,7 +26,7 @@ public class C04_FilePath {
         // C:\Users\sevil\IdeaProjects\seleniumTeam108\src\test\java\day07_actionClass_fileTest\text.txt
 
 
-        String dosyaYolu="/Users/ahmetbulutluoz/Desktop/Thedelta.docx";
+        String dosyaYolu="C:\\Users\\grkng\\OneDrive\\Desktop";
 
         boolean sonuc = Files.exists(Paths.get(dosyaYolu));
         System.out.println(sonuc);
@@ -45,7 +45,7 @@ public class C04_FilePath {
 
         System.out.println(System.getProperty("user.home"));
 
-        dosyaYolu="/Users/ahmetbulutluoz/Desktop/Thedelta.docx";
+        dosyaYolu="C:\\Users\\grkng\\OneDrive\\Desktop";
         dosyaYolu= System.getProperty("user.home") + "/Desktop/Thedelta.docx";
 
 

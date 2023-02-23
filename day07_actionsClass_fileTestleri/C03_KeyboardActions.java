@@ -21,13 +21,13 @@ public class C03_KeyboardActions extends TestBase {
                 .click();
         //3- Ad, soyad, mail ve sifre kutularina deger yazalim ve kaydol tusuna basalim
         bekle(2);
-        WebElement isimKutusu= driver.findElement(By.xpath("//input[@placeholder='First name']"));
+        WebElement isimKutusu= driver.findElement(By.xpath("//input[@name='firstname']"));
 
         Actions actions= new Actions(driver);
         Faker faker= new Faker();
         String fakeEmailAdress=faker.internet().emailAddress();
 
-        actions.click(isimKutusu)
+        actions
                 .sendKeys(faker.name().firstName())
                 .sendKeys(Keys.TAB)
                 .sendKeys(faker.name().lastName())
