@@ -13,7 +13,7 @@ public class C02_ImplicitlyWait {
             o sayfanin acilmasi,
             orada istedigimiz islemleri yapmak icin elementleri bulmasi... gibi islemler
             zaman gerektirebilir
-            implicitlyWait butur zaman isteyen islemler icin
+            implicitlyWait bu tur zaman isteyen islemler icin
             driver'in max. ne kadar bekleyecegini belirler
          */
     }

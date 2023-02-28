@@ -25,5 +25,6 @@ public class C03_DriverMethodlari {
         }else {//gidemediysek
             System.out.println("Test FAILED");
         }
+
     }
 }

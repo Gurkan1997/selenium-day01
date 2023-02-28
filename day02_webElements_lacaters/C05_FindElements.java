@@ -16,7 +16,7 @@ public class C05_FindElements {
         driver.get("https://www.amazon.com");
 
         // arama kutusuna java yazip aratin
-        WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement aramaKutusu= driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
         aramaKutusu.sendKeys("java");
         aramaKutusu.submit();
 

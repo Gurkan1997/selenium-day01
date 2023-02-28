@@ -11,16 +11,21 @@ public class C04_CookiesGecme {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.google.com");
+
         // cookies'i kabul ederek cookies ekranini kapatin
         driver.findElement(By.xpath("//div[text()='Accept all']")).click();
+
         // arama cubuguna Java yazip aratin
         WebElement aramaCubugu= driver.findElement(By.xpath("//input[@name='q']"));
         aramaCubugu.sendKeys("Java" + Keys.ENTER);
-        // bulunan sonuc sayisinin 100binden cok oldugunu test edin
+
+        // bulunan sonuc sayisinin 100 binden cok oldugunu test edin
         WebElement sonucSayiElementi= driver.findElement(By.xpath("//div[@id='result-stats']"));
+
         // About 1.350.000.000 results (0,43 seconds)
         String sonucYazisi= sonucSayiElementi.getText();
         String[] sonucYaziArr=sonucYazisi.split(" ");
+
         String sonucSayisiStr= sonucYaziArr[1]; // 1.350.000.000
         sonucSayisiStr = sonucSayisiStr.replaceAll("\\D","");
 

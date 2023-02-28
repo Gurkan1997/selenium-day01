@@ -13,7 +13,7 @@ public class C01_Xpath {
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
 
         //2- Add Element butonuna basin
-        driver.findElement(By.xpath("//button[@onclick = 'addElement()']")).click();
+        driver.findElement(By.xpath("//button[@onclick='addElement()']")).click();
 
         //3- Delete butonu’nun gorunur oldugunu test edin
         WebElement deleteButonElementi= driver.findElement(By.xpath("//button[@onclick = 'deleteElement()']"));
